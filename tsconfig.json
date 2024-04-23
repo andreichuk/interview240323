@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "DOM",
+            "ES2022"
+        ],
+        "target": "ES2022",
+        "module": "ES2022",
+        "moduleResolution": "Bundler",
+        "jsx": "react-jsx",
+        "allowJs": false,
+        "strict": true,
+        "esModuleInterop": false,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true
+    },
+    "include": [
+        "./src/**/*.ts",
+        "./src/**/*.tsx"
+    ]
+}

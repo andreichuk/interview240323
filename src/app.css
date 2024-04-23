@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* page */
+    --font-family: "sans";
+    --text-color: #39414b;
+    --padding: 21px 24px;
+    --gap: 24px;
+
+    /* menu */
+    --menu-border-color: #cfcfe4;
+    --menu-border-radius: 19px;
+    --menu-tag-active-background-color: #5fbf77;
+    --menu-tag-active-text-color: #fff;
+    --menu-tag-border-radius: 13px;
+    --menu-tag-padding: 10px;
+    --menu-padding: 11px;
+    --menu-width: 264px;
+
+    /* courses */
+    --course-border-radius: 20px;
+    --course-border-color: #1a1818;
+    --course-image-height: 162px;
+    --course-gap: 18px;
+    --course-shadow: 0 5px 5px #0004;
+    --course-title-padding: 15px;
+    --course-width-min: 177px;
+    --courses-per-row: 3;
+}
+
+body {
+    width: 100vw;
+}
+
+.page-container {
+    padding: var(--padding);
+    display: flex;
+    gap: var(--gap);
+    font-family: var(--font-family);
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.menu {
+    border: 1px solid var(--menu-border-color);
+    border-radius: var(--menu-border-radius);
+    display: flex;
+    flex: 0 0 var(--menu-width);
+    flex-direction: column;
+    height: fit-content;
+    list-style: none;
+    padding: var(--menu-padding);
+}
+
+.menu-item {
+    border-radius: var(--menu-tag-border-radius);
+    cursor: pointer;
+
+    padding: var(--menu-tag-padding);
+    text-align: left;
+}
+
+.menu-item.active {
+    background-color: var(--menu-tag-active-background-color);
+    color: var(--menu-tag-active-text-color);
+}
+
+.courses {
+    flex: 1;
+    display: grid;
+    height: fit-content;
+    grid-template-columns: repeat(var(--courses-per-row), minmax(min-content, 1fr));
+    gap: var(--course-gap);
+}
+
+.course {
+    border-radius: var(--course-border-radius);
+    box-shadow: var(--course-shadow);
+    overflow: hidden;
+}
+
+.course img {
+    height: var(--course-image-height);
+    width: auto;
+}
+
+.course-image {
+    font-size: 0; /* removes whitespaces */
+    text-align: center;
+}
+
+.course-title {
+    padding: var(--course-title-padding);
+    text-align: left;
+}
